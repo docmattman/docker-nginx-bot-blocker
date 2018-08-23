@@ -1,0 +1,10 @@
+version: '3.2'
+
+services:
+    # Bot-blocking nginx
+    nginx:
+        build:
+            context: .
+            dockerfile: ./_docker/nginx.dockerfile
+        ports:
+            - "8400:80"
